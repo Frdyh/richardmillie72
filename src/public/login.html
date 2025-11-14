@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindRush - Iniciar Sesión</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🎮 MindRush</h1>
+            <p>Pon a prueba tu conocimiento</p>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="tu@email.com" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="contrasena" 
+                    name="contrasena" 
+                    placeholder="••••••••" 
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="loginBtn">
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <div class="text-center">
+            <p style="color: var(--text-secondary);">
+                ¿No tienes cuenta? 
+                <a href="/register.html">Regístrate aquí</a>
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="#" id="limpiarSesion" style="color: var(--danger-color); font-size: 0.9em; text-decoration: underline; cursor: pointer;">
+                    Limpiar sesión
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/views/login.js"></script>
+</body>
+</html>

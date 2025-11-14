@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindRush - Jugando</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container game-container">
+        <!-- Pantalla de carga -->
+        <div id="loadingScreen" class="loading">
+            <div class="spinner"></div>
+            <p>Cargando preguntas...</p>
+        </div>
+
+        <!-- Pantalla de juego -->
+        <div id="gameScreen" style="display: none;">
+            <div class="game-header">
+                <div class="game-info">
+                    <div class="info-item">
+                        <span class="info-label">Puntuación:</span>
+                        <span class="info-value" id="score">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Pregunta:</span>
+                        <span class="info-value">
+                            <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Tiempo:</span>
+                        <span class="info-value timer" id="timer">30</span>
+                    </div>
+                </div>
+                <div class="lives" id="livesContainer"></div>
+            </div>
+
+            <div class="question-card">
+                <span class="question-category" id="category">Categoría</span>
+                <img id="questionImage" class="question-image" style="display: none;" alt="Imagen de la pregunta">
+                <h3 class="question-text" id="questionText">Cargando pregunta...</h3>
+                <div class="options-grid" id="optionsContainer"></div>
+            </div>
+
+            <button class="btn btn-secondary" id="quitBtn">
+                Abandonar Partida
+            </button>
+        </div>
+
+        <!-- Pantalla de resultado -->
+        <div id="resultScreen" style="display: none;">
+            <div class="result-card">
+                <h2 class="result-title" id="resultTitle">¡Partida Terminada!</h2>
+                <div class="result-score" id="finalScore">0</div>
+                <div class="result-details">
+                    <p style="margin: 10px 0;">
+                        <strong>Respuestas correctas:</strong> 
+                        <span id="correctAnswers">0</span> de <span id="totalAnswered">0</span>
+                    </p>
+                    <p style="margin: 10px 0;">
+                        <strong>Tiempo transcurrido:</strong> 
+                        <span id="timeElapsed">0</span> segundos
+                    </p>
+                    <p style="margin: 10px 0;">
+                        <strong>Vidas restantes:</strong> 
+                        <span id="livesLeft">0</span>
+                    </p>
+                </div>
+                <div style="display: grid; gap: 15px; margin-top: 30px;">
+                    <button class="btn btn-success" id="playAgainBtn">
+                        🔄 Jugar de Nuevo
+                    </button>
+                    <button class="btn btn-secondary" id="backToMenuBtn">
+                        🏠 Volver al Menú
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/views/game.js"></script>
+</body>
+</html>

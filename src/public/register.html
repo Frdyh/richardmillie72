@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindRush - Registro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🎮 MindRush</h1>
+            <p>Crea tu cuenta y comienza a jugar</p>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="identificacion">Identificación</label>
+                <input 
+                    type="text" 
+                    id="identificacion" 
+                    name="identificacion" 
+                    placeholder="Número de identificación" 
+                    required
+                    maxlength="15"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="nombres">Nombres</label>
+                <input 
+                    type="text" 
+                    id="nombres" 
+                    name="nombres" 
+                    placeholder="Tus nombres" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input 
+                    type="text" 
+                    id="apellidos" 
+                    name="apellidos" 
+                    placeholder="Tus apellidos" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="tu@email.com" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="contrasena" 
+                    name="contrasena" 
+                    placeholder="Mínimo 6 caracteres" 
+                    required
+                    minlength="6"
+                >
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="registerBtn">
+                Crear Cuenta
+            </button>
+        </form>
+
+        <div class="text-center">
+            <p style="color: var(--text-secondary);">
+                ¿Ya tienes cuenta? 
+                <a href="/login.html">Inicia sesión aquí</a>
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="#" id="limpiarSesion" style="color: var(--danger-color); font-size: 0.9em; text-decoration: underline; cursor: pointer;">
+                    Limpiar sesión
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/views/register.js"></script>
+</body>
+</html>

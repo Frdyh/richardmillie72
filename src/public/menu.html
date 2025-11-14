@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindRush - Menú Principal</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🎮 MindRush</h1>
+        </div>
+
+        <div class="welcome-section">
+            <h2>¡Bienvenido, <span id="userName">Jugador</span>!</h2>
+            <p style="color: var(--text-secondary); margin-top: 10px;">
+                Prepárate para desafiar tu conocimiento
+            </p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalPartidas">0</div>
+                <div class="stat-label">Partidas Jugadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="mejorPuntuacion">0</div>
+                <div class="stat-label">Mejor Puntuación</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="promedio">0</div>
+                <div class="stat-label">Promedio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalCorrectas">0</div>
+                <div class="stat-label">Respuestas Correctas</div>
+            </div>
+        </div>
+
+        <div class="menu-buttons">
+            <button class="btn btn-success" id="playBtn">
+                🎯 Jugar Trivia
+            </button>
+            <button class="btn btn-secondary" id="historialBtn">
+                📊 Ver Historial
+            </button>
+            <button class="btn btn-secondary" id="rankingBtn">
+                🏆 Ver Ranking
+            </button>
+            <button class="btn btn-danger" id="logoutBtn">
+                🚪 Cerrar Sesión
+            </button>
+        </div>
+
+        <!-- Modal de historial -->
+        <div id="historialModal" style="display: none;">
+            <div style="background: var(--dark-bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                <h3 style="color: var(--text-primary); margin-bottom: 15px;">Últimas Partidas</h3>
+                <div id="historialContent"></div>
+                <button class="btn btn-secondary" onclick="document.getElementById('historialModal').style.display='none'" style="margin-top: 15px;">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal de ranking -->
+        <div id="rankingModal" style="display: none;">
+            <div style="background: var(--dark-bg); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                <h3 style="color: var(--text-primary); margin-bottom: 15px;">🏆 Top 10 Jugadores</h3>
+                <div id="rankingContent"></div>
+                <button class="btn btn-secondary" onclick="document.getElementById('rankingModal').style.display='none'" style="margin-top: 15px;">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/views/menu.js"></script>
+</body>
+</html>
